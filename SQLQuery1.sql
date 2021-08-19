@@ -14,6 +14,9 @@ email varchar(255)
 );
 
 INSERT INTO dbo.AddressBookContacts values
-('Ariprasath', 'Sakthivel', '3/6, 4th main road', 'Bangalore', 'karnataka', '560085', '1235678900', 'ariprasath3@gmail.com');
+('Ariprasath', 'Sakthivel', '3/6, 4th main road', 'Bangalore', 'karnataka', '560085', '1235678900', 'ariprasath3@gmail.com'),
+('Raj', 'Kumar', '51, 2nd main road', 'Bangalore', 'karnataka', '560035', '12121215536', 'adas@gmail.com');
 
 UPDATE dbo.AddressBookContacts SET address='413, 5th main road' WHERE firstName='Ariprasath';
+
+DELETE FROM dbo.AddressBookContacts WHERE firstName='Raj';
