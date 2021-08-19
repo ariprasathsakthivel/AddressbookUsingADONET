@@ -24,9 +24,9 @@ DELETE FROM dbo.AddressBookContacts WHERE firstName='Raj';
 
 SELECT * FROM dbo.AddressBookContacts WHERE city='Bangalore' OR state='Tamil Nadu';
 
-SELECT city, COUNT(city) FROM dbo.AddressBookContacts GROUP BY city;
+SELECT city, COUNT(city) AS cityCount FROM dbo.AddressBookContacts GROUP BY city;
 
-SELECT state, COUNT(state) FROM dbo.AddressBookContacts GROUP BY state;
+SELECT state, COUNT(state) AS stateCount FROM dbo.AddressBookContacts GROUP BY state;
 
 SELECT * FROM dbo.AddressBookContacts WHERE city='Bangalore' ORDER BY firstName ASC;
 
@@ -35,3 +35,6 @@ ALTER TABLE dbo.AddressBookContacts add addressBookType varchar(20) not null DEF
 UPDATE dbo.AddressBookContacts SET addressBookName='book1', addressBookType='Friends' WHERE firstName='Ariprasath';
 UPDATE dbo.AddressBookContacts SET addressBookName='book1', addressBookType='Proffession' WHERE firstName='Raj';
 UPDATE dbo.AddressBookContacts SET addressBookName='book2', addressBookType='Family' WHERE firstName='Ragu';
+
+
+SELECT addressBookType, COUNT(addressBookType) AS addressBookTypeCount FROM dbo.AddressBookContacts GROUP BY addressBookType;
