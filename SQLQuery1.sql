@@ -27,3 +27,5 @@ SELECT * FROM dbo.AddressBookContacts WHERE city='Bangalore' OR state='Tamil Nad
 SELECT city, COUNT(city) FROM dbo.AddressBookContacts GROUP BY city;
 
 SELECT state, COUNT(state) FROM dbo.AddressBookContacts GROUP BY state;
+
+SELECT * FROM dbo.AddressBookContacts WHERE city='Bangalore' ORDER BY firstName;
