@@ -1,1 +1,1 @@
-﻿CREATE DATABASE AddressBookService;
+﻿CREATE DATABASE AddressBook;
