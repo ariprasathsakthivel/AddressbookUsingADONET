@@ -23,3 +23,7 @@ UPDATE dbo.AddressBookContacts SET address='413, 5th main road' WHERE firstName=
 DELETE FROM dbo.AddressBookContacts WHERE firstName='Raj';
 
 SELECT * FROM dbo.AddressBookContacts WHERE city='Bangalore' OR state='Tamil Nadu';
+
+SELECT city, COUNT(city) FROM dbo.AddressBookContacts GROUP BY city;
+
+SELECT state, COUNT(state) FROM dbo.AddressBookContacts GROUP BY state;
