@@ -29,3 +29,9 @@ SELECT city, COUNT(city) FROM dbo.AddressBookContacts GROUP BY city;
 SELECT state, COUNT(state) FROM dbo.AddressBookContacts GROUP BY state;
 
 SELECT * FROM dbo.AddressBookContacts WHERE city='Bangalore' ORDER BY firstName ASC;
+
+ALTER TABLE dbo.AddressBookContacts add addressBookName varchar(20) not null DEFAULT 'Book1';
+ALTER TABLE dbo.AddressBookContacts add addressBookType varchar(20) not null DEFAULT 'Family';
+UPDATE dbo.AddressBookContacts SET addressBookName='book1', addressBookType='Friends' WHERE firstName='Ariprasath';
+UPDATE dbo.AddressBookContacts SET addressBookName='book1', addressBookType='Proffession' WHERE firstName='Raj';
+UPDATE dbo.AddressBookContacts SET addressBookName='book2', addressBookType='Family' WHERE firstName='Ragu';
