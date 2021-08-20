@@ -38,3 +38,10 @@ UPDATE dbo.AddressBookContacts SET addressBookName='book2', addressBookType='Fam
 
 
 SELECT addressBookType, COUNT(addressBookType) AS addressBookTypeCount FROM dbo.AddressBookContacts GROUP BY addressBookType;
+
+INSERT INTO dbo.AddressBookContacts values
+('Ariprasath', 'Sakthivel', '3/6, 4th main road', 'Bangalore', 'karnataka', 560085, '1235678900', 'ariprasath3@gmail.com', 'Book1', 'Family'),
+('Raj', 'Kumar', '51, 2nd main road', 'Bangalore', 'karnataka', 560035, '12121215536', 'adas@gmail.com', 'Book2', 'Friends'),
+('Ragu', 'ram', '50, 1st main', 'chennai', 'Tamil Nadu', 636808, '1212333655', 'abc@gmail.com', 'Book1', 'profession');
+
+select * from dbo.AddressBookContacts;
